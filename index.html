@@ -1,0 +1,67 @@
+---
+layout: default
+title: "Dashboard"
+description: "Legacy Ranch High School Debate Team dashboard"
+---
+
+<section class="hero fade-section">
+  <div class="hero-content">
+    <h1>Legacy Ranch High School Debate</h1>
+    <p>Liberty Hill, Texas • Building voices, arguments, and legacy.</p>
+  </div>
+</section>
+
+<section class="dashboard-grid">
+  <article class="card fade-section">
+    <h2>Latest Announcements</h2>
+    <p class="card-subtitle">Fresh updates from the Legacy Ranch Debate coaching staff.</p>
+    <ul class="announcement-list">
+      {% assign sorted_posts = site.posts | sort: 'date' | reverse %}
+      {% for post in sorted_posts limit:3 %}
+      <li class="announcement-item">
+        <a href="{{ post.url | relative_url }}" class="announcement-title">{{ post.title }}</a>
+        <span class="announcement-date">{{ post.date | date: "%B %d, %Y" }}</span>
+        <p class="announcement-excerpt">{{ post.excerpt | strip_html | truncate: 140 }}</p>
+      </li>
+      {% endfor %}
+      {% if sorted_posts == empty %}
+      <li>No announcements yet. Check back soon.</li>
+      {% endif %}
+    </ul>
+    <a class="card-link" href="{{ '/announcements.html' | relative_url }}">View all announcements →</a>
+  </article>
+
+  <article class="card fade-section">
+    <h2>Season Leaderboard</h2>
+    <p class="card-subtitle">Top performers representing Legacy Ranch at tournaments.</p>
+    <div class="mini-leaderboard">
+      <table>
+        <thead>
+          <tr>
+            <th>Rank</th>
+            <th>Debater</th>
+            <th>Points</th>
+          </tr>
+        </thead>
+        <tbody id="mini-leaderboard-body">
+          <!-- Filled by JS from assets/data/leaderboard.csv -->
+        </tbody>
+      </table>
+    </div>
+    <a class="card-link" href="{{ '/leaderboard.html' | relative_url }}">Full leaderboard →</a>
+  </article>
+
+  <article class="card fade-section">
+    <h2>Upcoming Events</h2>
+    <p class="card-subtitle">Tournaments, practices, and team meetings.</p>
+    <p>Check the full calendar for practice blocks, travel days, and tournament schedules.</p>
+    <a class="card-button" href="{{ '/calendar.html' | relative_url }}">Open calendar</a>
+  </article>
+
+  <article class="card fade-section">
+    <h2>Meet the Officers</h2>
+    <p class="card-subtitle">Student leaders guiding Legacy Ranch Debate.</p>
+    <p>From novice mentoring to varsity strategy, our officers keep the team sharp and connected.</p>
+    <a class="card-link" href="{{ '/officers.html' | relative_url }}">View officer profiles →</a>
+  </article>
+</section>

@@ -1,0 +1,27 @@
+---
+layout: default
+title: "Announcements"
+description: "Official announcements for the Legacy Ranch High School Debate Team."
+---
+
+<section class="page-header fade-section">
+  <h1>Team Announcements</h1>
+  <p>Official updates for Legacy Ranch High School Debate in Liberty Hill, Texas.</p>
+</section>
+
+<section class="announcements-page fade-section">
+  {% assign sorted_posts = site.posts | sort: 'date' | reverse %}
+  {% if sorted_posts == empty %}
+    <p>No announcements yet. When coaches publish posts in <code>_posts/</code>, they will appear here automatically.</p>
+  {% else %}
+    {% for post in sorted_posts %}
+    <article class="announcement-card">
+      <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+      <p class="announcement-meta">{{ post.date | date: "%B %d, %Y" }}</p>
+      <div class="announcement-body">
+        {{ post.content }}
+      </div>
+    </article>
+    {% endfor %}
+  {% endif %}
+</section>

@@ -1,0 +1,31 @@
+---
+layout: default
+title: "Leaderboard"
+description: "Legacy Ranch High School Debate Team leaderboard and season points."
+---
+
+<section class="page-header fade-section">
+  <h1>Season Leaderboard</h1>
+  <p>Points earned by Legacy Ranch debaters across tournaments and events.</p>
+</section>
+
+<section class="leaderboard-section fade-section">
+  <div class="leaderboard-card">
+    <table class="leaderboard-table">
+      <thead>
+        <tr>
+          <th>Rank</th>
+          <th>Debater</th>
+          <th>School</th>
+          <th>Points</th>
+        </tr>
+      </thead>
+      <tbody id="leaderboard-body">
+        <!-- Populated by JS from assets/data/leaderboard.csv -->
+      </tbody>
+    </table>
+    <p class="leaderboard-note">
+      Rankings are calculated automatically from <code>assets/data/leaderboard.csv</code> (sorted by points, highest first).
+    </p>
+  </div>
+</section>
