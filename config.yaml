@@ -1,0 +1,8 @@
+title: "Legacy Ranch High School Debate"
+description: "Legacy Ranch High School Debate Team – Liberty Hill, Texas"
+baseurl: ""
+url: "https://your-username.github.io/legacy-ranch-debate-site"
+markdown: kramdown
+theme: null
+plugins: []
+permalink: /:categories/:year/:month/:day/:title/
