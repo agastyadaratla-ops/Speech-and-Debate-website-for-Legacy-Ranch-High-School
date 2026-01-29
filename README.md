@@ -2,19 +2,7 @@
 
 Official-style website for the **Legacy Ranch High School Debate Team** in **Liberty Hill, Texas**, built for GitHub Pages using Jekyll.
 
-## Deployment
 
-1. Create a new GitHub repository (for example: `legacy-ranch-debate-site`).
-2. Copy all files and folders from this archive into the repository.
-3. Commit and push to GitHub.
-4. In your repository settings:
-   - Go to **Pages**.
-   - Set **Source** to `Deploy from a branch`.
-   - Choose the `main` (or `master`) branch and the root (`/`) folder.
-5. Wait a few minutes for GitHub Pages to build the site.
-6. Visit the published URL shown in the Pages settings.
-
-No additional configuration changes are required for GitHub Pages.
 
 ## Files you are expected to edit
 
